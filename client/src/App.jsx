@@ -9,6 +9,11 @@ import ShopCategory from './pages/ShopCategory'
 import Product from './pages/Product'
 import Cart from './pages/Cart'
 import LoginSignup from './pages/LoginSignup'
+import Footer from './components/Footer/Footer'
+import menBanner from "./assets/Frontend_Assets/banner_mens.png"
+import womenBanner from "./assets/Frontend_Assets/banner_women.png"
+import kidsBanner from "./assets/Frontend_Assets/banner_kids.png"
+console.log("men", menBanner)
 
 
 function App() {
@@ -20,9 +25,9 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="/" element={<Shop/>}/>
-          <Route path="/mens" element={<ShopCategory category='mens'/>}/>
-          <Route path="/womens" element={<ShopCategory category='womens'/>}/>
-          <Route path="/kids" element={<ShopCategory category='kids'/>}/>
+          <Route path="/mens"  element={<ShopCategory banner={menBanner} category='men'/>}/>
+          <Route path="/womens"  element={<ShopCategory banner={womenBanner} category='women'/>}/>
+          <Route path="/kids"  element={<ShopCategory banner={kidsBanner} category='kid'/>}/>
 
           <Route path="/product" element={<Product/>}/>
             <Route path=":productId" element={<Product/>}>
@@ -33,6 +38,7 @@ function App() {
           
           
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   )

@@ -4,7 +4,7 @@ import Popular from '../components/Popular/Popular'
 import Offers from '../components/Offers/Offers'
 import NewCollections from '../components/NewCollections/NewCollections'
 import Newsletter from '../components/Newsletter/Newsletter'
-import Footer from '../components/Footer/Footer'
+
 
 function Shop() {
   return (
@@ -14,7 +14,7 @@ function Shop() {
       <Offers/>
       <NewCollections/>
       <Newsletter/>
-      <Footer/>
+      
     </div>
   )
 }
